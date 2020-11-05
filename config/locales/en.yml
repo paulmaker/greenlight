@@ -36,7 +36,7 @@ en:
         enabled: Enabled
         info: Only allow authenticated users to join a room
         title: Require Authentication for Rooms
-        user-info: You must sign in above to join this room.
+        user-info: If you have not already registered, please Sign Up above.
       branding:
         change: Change Image
         info: Change the branding image that appears in the top left corner
@@ -279,7 +279,7 @@ en:
     designs: Custom Designs
     authentication: User Authentication
   footer:
-    legal: Terms
+    legal: Terms & Conditions
     privpolicy: Privacy Policy
     powered_by: Powered by %{href}.
   forgot_password:
@@ -312,7 +312,7 @@ en:
       start: Start searching...
   landing:
     about: "%{href} is a simple front-end for your BigBlueButton open-source web conferencing server. You can create your own rooms to host sessions, or join others using a short and convenient link."
-    welcome: Welcome to BigBlueButton.
+    welcome: Welcome to our Virtual Consultation Room.
     video: Watch our tutorial on using Greenlight
     upgrade: Show me how to upgrade to 2.0!
     version: We've released a new version of Greenlight, but your database isn't compatible.
@@ -363,8 +363,8 @@ en:
         more-info: To view your new abilities please visit %{url}.
         subtitle: "%{role} Rights Granted"
       verify_email:
-        welcome: Welcome to your personal space, %{name}!
-        success: Leveraging %{bigbluebutton}, you can create your own rooms to host sessions and collaborate with others.
+        welcome: Welcome to our virtual consultation, %{name}!
+        success: Your registration has been accepted.
         username: Your username is %{email}.
         verify: To verify your account, just click the button below.
         verify_text: 'To verify your account, just follow this link: %{url}'
@@ -537,7 +537,7 @@ en:
     enter_the_access_code: Enter the room's access code
     invalid_provider: You have entered an invalid url. Please check the url and try again.
     invitation_description: You have been invited to join %{name} using BigBlueButton. To join, click the link above and enter your name.  
-    invited: You have been invited to join
+    invited: You are invited to join
     recording_present: I acknowledge that this session is going to be recorded. This may include my voice and video if enabled.
     invite_participants: Invite Participants
     join: Join

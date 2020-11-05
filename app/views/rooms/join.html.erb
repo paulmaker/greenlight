@@ -1,3 +1,4 @@
+
 <%
 # BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
 # Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
@@ -18,7 +19,18 @@
 <% valid_access_code = @room.access_code.nil? || @room.access_code.empty? || @room.access_code == session[:access_code] %>
 <%= render 'rooms/components/room_event', render_recordings: valid_access_code do %>
   <% if room_authentication_required %>
-    <h2><%= t("administrator.site_settings.authentication.user-info") %></h2>
+  <script>
+window.onload=function(){
+
+  var element = document.getElementById('Go');
+  var path = window.location.pathname;
+
+  if(element != null && path.indexOf('signin')==-1){
+    element.click();
+  };
+};
+
+</script>
   <% elsif !valid_access_code %>
     <%= form_for :room, url: login_room_path(@room.uid) do |f| %>
       <div class="input-group join-input">
@@ -32,6 +44,21 @@
       </div>
     <% end %>
   <% else %>
+
+<script>
+
+window.onload=function(){
+
+  var element = document.getElementById('room-join');
+  element.click();
+  };
+};
+
+</script>
+
+
+
+
     <%= form_for room_path(@room), method: :post do |f| %>
       <div class="input-group">
         <%= f.hidden_field(:search, :value => params[:search])%>
@@ -59,4 +86,6 @@
       <% end %>
     <% end %>
   <% end %>
+
+
 <% end %>

@@ -28,7 +28,7 @@
       </script>
     <% end %>
 
-    <title><%= yield(:page_title).present? ? yield(:page_title) : t("bigbluebutton") %></title>
+    <title>Urmston Virtual Consultation</title>
     <meta property="og:title" content="<%= yield(:page_title).present? ? yield(:page_title) : t("bigbluebutton") %>" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="<%= yield(:page_desc).present? ? yield(:page_desc) : t("landing.about", href: "Greenlight", locale: :en) %>" />
@@ -60,6 +60,14 @@
   </head>
 
   <body class="app-background" data-controller="<%= params[:controller] %>" data-action="<%= params[:action] %>" data-relative-root="<%= Rails.configuration.relative_url_root || "/" %>">
+
+  <div id="box">
+    <div class="browsealoud">
+      <div id="__ba_launchpad"></div>
+    </div>
+  </div>
+
+
     <%= render "shared/header" %>
 
     <div class="wrapper">

@@ -1,43 +1,43 @@
-<%
-# BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
-# Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
-# This program is free software; you can redistribute it and/or modify it under the
-# terms of the GNU Lesser General Public License as published by the Free Software
-# Foundation; either version 3.0 of the License, or (at your option) any later
-# version.
-#
-# BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
-# You should have received a copy of the GNU Lesser General Public License along
-# with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
-%>
+
 
 <div class="container">
+
   <div class="row pt-7">
+
+<div class="col col-lg-3">
+<div class="content-width">
+<h2>Urmston Virtual Public Consultation Chat Room</h2>
+<p>We’ve listened to your feedback from our initial consultation and are now ready to present proposals which include a number of proposed solutions to concerns fed back by the community. This includes improving street lighting, restricting motor vehicles at various locations, creating school streets, maintaining cycle lanes and footpaths and much more.</p>
+<p>We want to hear your views on these proposals. Your feedback will inform the development of the scheme.</p>
+<p>As we are currently unable to hold local events, we have created a virtual reality room to present he next steps for Urmston’s Active Neighbourhood project. By visiting the virtual room you can learn more about the proposals which include statistics of each ward, walking and cycling interventions at specific locations and drawings of what we are proposing.
+</p>
+<p>Alongside this we are also holding live webchat sessions where you can speak to the project team who will be happy to answer any questions you have:
+</p>
+<ul>
+<li style="color:blue; text-decoration: underline;"><a href="https://www.eventbrite.co.uk/e/93477946053" target="_blank">Monday 16th November: 10am – 2pm</a></li>
+<li style="color:blue; text-decoration: underline;"><a href="https://www.eventbrite.co.uk/e/123481812425" target="_blank">Tuesday 17th November: 2pm – 4pm</a></li>
+<li style="color:blue; text-decoration: underline;"><a href="https://www.eventbrite.co.uk/e/123482095271" target="_blank">Wednesday 18th November: 5pm – 7pm<</a></li>
+<li style="color:blue; text-decoration: underline;"><a href="https://www.eventbrite.co.uk/e/123482323955" target="_blank">Thursday 19th November: 11am – 1pm</a></li>
+<li style="color:blue; text-decoration: underline;"><a href="https://www.eventbrite.co.uk/e/123482414225" target="_blank">Friday 20th November: 1pm – 3pm</a></li>
+<li style="color:blue; text-decoration: underline;"><a href="https://www.eventbrite.co.uk/e/123482484435" target="_blank">Saturday 21st November: 1pm – 3pm</a></li>
+<li style="color:blue; text-decoration: underline;"><a href="https://www.eventbrite.co.uk/e/123482709107" target="_blank">Monday 23rd November: 3pm – 5pm</a></li>
+<li style="color:blue; text-decoration: underline;"><a href="https://www.eventbrite.co.uk/e/123484163457" target="_blank">Tuesday 24th November: 10am – 12pm</a></li>
+<li style="color:blue; text-decoration: underline;"><a href="https://www.eventbrite.co.uk/e/123484327949" target="_blank">Wednesday 25th November: 12pm – 2pm</a></li>
+<li style="color:blue; text-decoration: underline;"><a href="https://www.eventbrite.co.uk/e/123484552621" target="_blank">Thursday 26th November: 6pm – 8pm</a></li>
+<li style="color:blue; text-decoration: underline;"><a href="https://www.eventbrite.co.uk/e/123484652921" target="_blank">Friday 27th November: 2pm – 4pm</a></li>
+</ul>
+<p>Outside of these times, you can also submit questions to our team who will get back to you as soon as possible.</p>
+<p>To access the chat room please <%= link_to t("signup.title"), signup_path, :class => "btn btn-outline-primary mx-2 sign-in-button" %> or use your existing account to log in.
+</p>
+</div>
+</div>
     <div class="col col-lg-6 offset-lg-3">
       <div class="card">
         <div class="card-header background">
           <h4 class="mt-2"><%= t("login_title") %></h4>
         </div>
         <div class="card-body background">
-          <% unless iconset_providers.length.zero? %>
-            <% iconset_providers.each do |provider| %>
-              <%= link_to omniauth_login_url(provider), class: "customBtn-#{provider} oauth-signin" do %>
-                <span class="customBtn-icon ">
-                  <img class="customBtn-image"></img>
-                </span>
-                <span class="customBtn-text"><%= t("modal.login.with", provider: t("provider.#{provider}")) %></span>
-              <% end %>
-            <% end %>
-            <div class="or-line my-6">
-              <div>
-                <span class="text-uppercase" style="background-color: #F5F7FB;">
-                  <%= t("modal.login.or") %>
-                </span>
-              </div>
-            </div>
-          <% end %>
+         
           <%= form_for(:session, url: create_session_path) do |f| %>
             <div class="form-group">
               <div class="input-icon">
@@ -70,4 +70,23 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div class="container mt-8 mb-6">
+
+  <div class="row feature-stamp">
+
+    <div class="col-lg-4 col-md-6">
+<div class="trafford"><img src="https://amey-consultation-assets.s3-eu-west-1.amazonaws.com/Logos/one-trafford-amey.png" alt="One Trafford & Amey Plc"></div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+<img src="https://amey-consultation-assets.s3-eu-west-1.amazonaws.com/Logos/GMCA+Black+logo+expanded.png" alt="Greater Manchester Combined Authority">
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+<img src="https://amey-consultation-assets.s3-eu-west-1.amazonaws.com/Logos/TfGM-logo-full-black-500px.jpg" alt="Transport for Greater Manchester">
+    </div>
+  </div>
+
 </div>
